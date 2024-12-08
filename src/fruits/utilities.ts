@@ -9,11 +9,6 @@ export const Utilities = Object.freeze({
 	
 	getKeyValue: (searchKey: keyof Fruit, searchValue: string, returnKey: keyof Fruit): string | undefined => Utilities.getFruit(searchKey, searchValue)?.[returnKey] || undefined,
 
-	getFruitsByCategory: (category) => {
-		// använd fruits-arrayen
-		// ta emot en kategori och returnera en array av alla frukter som ingår i den kategorin
-	},
-
 	// gör en getFruitsByColor också
 
 	getIconsByCategory: (category) => {
