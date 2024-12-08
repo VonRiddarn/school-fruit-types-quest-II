@@ -9,10 +9,8 @@ export const Utilities = Object.freeze({
 	
 	getKeyValue: (searchKey: keyof Fruit, searchValue: string, returnKey: keyof Fruit): string | undefined => Utilities.getFruit(searchKey, searchValue)?.[returnKey] || undefined,
 
-	getIconsByCategory: (category) => {
-		// använd fruits-arrayen
-		// ta emot en kategori och returnera alla ikoner från alla frukter i den kategorin
-	}
+	// TODO: Maybe put inside a Set to avoid duplicates
+	getKeyValues: (searchKey: keyof Fruit, searchValue: string, returnKeys: keyof Fruit): string[] => Utilities.getFruits(searchKey, searchValue).map((fruit) => fruit[returnKeys]),
 });
 
 // gör en getIconsByColor också

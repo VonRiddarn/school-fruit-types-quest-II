@@ -51,3 +51,7 @@ console.log(Utilities.getFruits("category", "citrus"));
 // gör en getFruitsByColor också
 // This method already adheres to this requirement
 console.log(Utilities.getFruits("color", "yellow"));
+
+console.log("dsadsadsad");
+console.log(Utilities.getKeyValues("category", "citrus", "icon")); // Gets icons of all fruits in category "citrus"
+console.log(Utilities.getKeyValues("category", "doesNotExist", "icon")); // []
