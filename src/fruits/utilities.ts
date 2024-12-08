@@ -1,8 +1,9 @@
+import Fruit from "./fruit";
+import { fruits } from "./fruits";
+
 export const Utilities = Object.freeze({
-	getFruit: (name) => {
-		// använd fruits-arrayen och returnera det fruit-objekt som matchar name
-		// finns det ingen sådan fruit så returnera undefined
-	},
+	// Gets only the first fruit that matches the key and value
+	getFruit: (key: keyof Fruit, value: string): Fruit | undefined => fruits.find((fruit) => fruit[key] === value) || undefined,
 
 	getIcon: (name) => {
 		// använd fruits-arrayen och returnera ikonen som matchar frukten name
