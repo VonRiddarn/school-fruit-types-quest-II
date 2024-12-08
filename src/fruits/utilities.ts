@@ -7,15 +7,7 @@ export const Utilities = Object.freeze({
 	
 	getFruits: (key: keyof Fruit, value: string): Fruit[] => fruits.filter((fruit) => fruit[key] === value),
 	
-	getIcon: (name) => {
-		// använd fruits-arrayen och returnera ikonen som matchar frukten name
-		// finns det ingen sådan frukt så returnera undefined
-	},
-
-	getColor: (name) => {
-		// använd fruits-arrayen och returnera färgen som matchar frukten name
-		// finns det ingen sådan frukt så returnera undefined
-	},
+	getKeyValue: (searchKey: keyof Fruit, searchValue: string, returnKey: keyof Fruit): string | undefined => Utilities.getFruit(searchKey, searchValue)?.[returnKey] || undefined,
 
 	// gör en till funktion som man ger ett fruktnamn och som returnerar en frukts kategori
 

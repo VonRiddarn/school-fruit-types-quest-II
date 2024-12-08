@@ -10,3 +10,9 @@ console.log(Utilities.getFruit("name", "doesNotExist")); // undefined
 
 console.log(Utilities.getFruits("category", "pepo"));
 console.log(Utilities.getFruits("category", "doesNotExist")); // []
+
+console.log(Utilities.getKeyValue("name", "grape", "icon")); // Gets icon of first fruit named "grape"
+console.log(Utilities.getKeyValue("name", "doesNotExist", "icon")); // undefined
+
+console.log(Utilities.getKeyValue("name", "grape", "color")); // Gets color of first fruit named "grape"
+console.log(Utilities.getKeyValue("name", "doesNotExist", "color")); // undefined
