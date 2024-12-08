@@ -16,3 +16,8 @@ console.log(Utilities.getKeyValue("name", "doesNotExist", "icon")); // undefined
 
 console.log(Utilities.getKeyValue("name", "grape", "color")); // Gets color of first fruit named "grape"
 console.log(Utilities.getKeyValue("name", "doesNotExist", "color")); // undefined
+
+
+// Teachers note: gör en till funktion som man ger ett fruktnamn och som returnerar en frukts kategori
+// This already method adheres to this requirement
+console.log(Utilities.getKeyValue("name", "grape", "category"));
