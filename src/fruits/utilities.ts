@@ -9,11 +9,13 @@ export const Utilities = Object.freeze({
 	
 	getKeyValue: (searchKey: keyof Fruit, searchValue: string, returnKey: keyof Fruit): string | undefined => Utilities.getFruit(searchKey, searchValue)?.[returnKey] || undefined,
 
-	// TODO: Maybe put inside a Set to avoid duplicates
-	getKeyValues: (searchKey: keyof Fruit, searchValue: string, returnKeys: keyof Fruit): string[] => Utilities.getFruits(searchKey, searchValue).map((fruit) => fruit[returnKeys]),
+	getKeyValues: (searchKey: keyof Fruit, searchValue: string, returnKeys: keyof Fruit, unique: boolean = false): string[] => {
+		let keys = Utilities.getFruits(searchKey, searchValue).map((fruit) => fruit[returnKeys]);
+		return unique ? [...new Set(keys)] : keys;
+	},
+
+	getAllKeyValues: (returnKey: keyof Fruit, unique: boolean = true): string[] => {
+		let keys = fruits.map((fruit) => fruit[returnKey]);
+		return unique ? [...new Set(keys)] : keys;
+	},
 });
-
-// gör en getIconsByColor också
-
-// gör en getCategories som returnerar en array av alla kategorier
-// gör en getColors som returnerar en array av alla färger

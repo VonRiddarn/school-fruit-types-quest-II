@@ -55,3 +55,20 @@ console.log(Utilities.getFruits("color", "yellow"));
 console.log("dsadsadsad");
 console.log(Utilities.getKeyValues("category", "citrus", "icon")); // Gets icons of all fruits in category "citrus"
 console.log(Utilities.getKeyValues("category", "doesNotExist", "icon")); // []
+
+console.log(Utilities.getAllKeyValues("icon")); // Gets all icons
+
+/* Teachers notes:
+	// gör en getIconsByColor också
+	// gör en getCategories som returnerar en array av alla kategorier
+	// gör en getColors som returnerar en array av alla färger
+*/
+
+// This method already adheres to these requirement
+// Note: these methdods also have a unique parameter so that one can choose wether to get duplicate values or not
+
+console.log(Utilities.getKeyValues("color", "yellow", "icon")); // Gets icons of all fruits with color "yellow"
+console.log(Utilities.getAllKeyValues("category")); // Gets all categories
+
+console.log(Utilities.getAllKeyValues("color")); // Gets all colors - no dupes
+console.log(Utilities.getAllKeyValues("color", false)); // Gets all colors - with dupes
