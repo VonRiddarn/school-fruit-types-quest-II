@@ -72,3 +72,6 @@ console.log(Utilities.getAllKeyValues("category")); // Gets all categories
 
 console.log(Utilities.getAllKeyValues("color")); // Gets all colors - no dupes
 console.log(Utilities.getAllKeyValues("color", false)); // Gets all colors - with dupes
+
+// TODO: Make a quick HTML page that uses the functions in fruits/utilities.ts to display some information about the fruits
+// Maybe something for school tomorrow
