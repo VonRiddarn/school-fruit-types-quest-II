@@ -4,7 +4,9 @@ import { fruits } from "./fruits";
 export const Utilities = Object.freeze({
 	// Gets only the first fruit that matches the key and value
 	getFruit: (key: keyof Fruit, value: string): Fruit | undefined => fruits.find((fruit) => fruit[key] === value) || undefined,
-
+	
+	getFruits: (key: keyof Fruit, value: string): Fruit[] => fruits.filter((fruit) => fruit[key] === value),
+	
 	getIcon: (name) => {
 		// använd fruits-arrayen och returnera ikonen som matchar frukten name
 		// finns det ingen sådan frukt så returnera undefined
