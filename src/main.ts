@@ -21,3 +21,12 @@ console.log(Utilities.getKeyValue("name", "doesNotExist", "color")); // undefine
 // Teachers note: gör en till funktion som man ger ett fruktnamn och som returnerar en frukts kategori
 // This already method adheres to this requirement
 console.log(Utilities.getKeyValue("name", "grape", "category"));
+
+/* Teachers note:
+	numberOfColoredFruits: (color) => {
+		// använd fruits-arrayen och returnera hur många frukter det finns av en given färg color
+		// finns det inga frukter av den färgen så svara 0
+	},
+*/
+// This method already adheres to this requirement
+console.log(Utilities.getFruits("color", "yellow").length);
