@@ -30,3 +30,10 @@ console.log(Utilities.getKeyValue("name", "grape", "category"));
 */
 // This method already adheres to this requirement
 console.log(Utilities.getFruits("color", "yellow").length);
+
+/* Teachers note:
+	// gör en numberOfCategoryFruits här också
+	// använd fruits-arrayen och returnera hur många frukter det finns av en given kategori
+*/
+// This method already adheres to this requirement
+console.log(Utilities.getFruits("category", "citrus").length);
