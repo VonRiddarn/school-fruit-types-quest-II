@@ -1,4 +1,6 @@
-export const fruits = [
+import Fruit from "./fruit";
+
+export const fruits: Fruit[] = [
 	{
 		name: "grape",
 		icon: "🍇",
