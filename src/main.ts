@@ -46,3 +46,8 @@ console.log(Utilities.getFruits("category", "citrus").length);
 */
 // This method already adheres to this requirement
 console.log(Utilities.getFruits("category", "citrus"));
+
+// Teachers note:
+// gör en getFruitsByColor också
+// This method already adheres to this requirement
+console.log(Utilities.getFruits("color", "yellow"));
