@@ -1,6 +1,13 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background-color: rgb(185, 255, 142);
 	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+	padding: 2rem;
 
 	h1 {
 		font-size: 3rem;
@@ -9,4 +16,56 @@ body {
 	p {
 		font-size: 1.5rem;
 	}
+}
+
+#fruit-cards {
+	display: grid;
+	grid-template-columns: repeat(5, 200px);
+	gap: 1rem;
+}
+
+.card {
+	position: relative;
+	top: 0;
+	transition: top ease 0.15s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+
+	width: 200px;
+	height: 400px;
+	background-color: aliceblue;
+
+	border-radius: 5px;
+	border-color: aqua;
+	border-width: 3px;
+	border-style: solid;
+
+	/* Should probably collect under a class like .noselect*/
+ 	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+}
+
+.card:hover {
+	position: relative;
+	top: -10px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.233);
+}
+
+.card p:first-child {
+	font-size: 72px;
+	margin-bottom: 1rem;
+}
+
+.card p:nth-child(2) {
+	text-transform: capitalize;
+	font-weight: 800;
+	font-size: xx-large;
 }
