@@ -127,9 +127,10 @@ Renderer.updateContainer(container, Renderer.createFruitCards(fruits))
 
 let key = document.getElementById("search-keys") as HTMLInputElement;
 let query = document.getElementById("search-query") as HTMLInputElement;
+let strict = document.getElementById("search-strict") as HTMLInputElement;
 
 document.getElementById("search-button")?.addEventListener('click', (e) => {
-	Renderer.updateContainer(container, Renderer.createFruitCards(Utilities.getFruits(key.value as keyof Fruit, query.value)));
+	Renderer.updateContainer(container, Renderer.createFruitCards(Utilities.getFruits(key.value as keyof Fruit, query.value, strict.checked)));
 });
 
 
