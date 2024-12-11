@@ -6,18 +6,22 @@
 		<title>🥭</title>
 	</head>
 	<body>
-		<h1>🥭 fruit-types-quest-II 🥭</h1>
-		<p>You are on a quest to add types and fix this code so it WORKS!...</p>
-		<p>Look in the Console (windows: Ctrl + Shift + J)</p>
-		<select id="search-keys">
+		<main>
+			<h1>🥭 fruit-types-quest-II 🥭</h1>
+			<p>You are on a quest to add types and fix this code so it WORKS!...</p>
+			<p>Look in the Console (windows: Ctrl + Shift + J)</p>
 
-		</select>
-		<input type="text" id="search-query">
+			<!--Maybe make this dynamic later?-->
+			<select id="search-keys">
+				<option value="name">Name</option>
+				<option value="color">Color</option>
+				<option value="category">Category</option>
+			</select>
+			<input type="text" id="search-query">
+			<button type="button" id="search-button">Search</button>
 
-		<section id="fruit-cards">
-
-		</section>
-
+			<section id="fruit-cards"></section>
+		</main>	
 		<script type="module" src="/src/main.ts"></script>
 	</body>
 </html>

@@ -1,3 +1,4 @@
+import Fruit from "./fruits/fruit";
 import { fruits } from "./fruits/fruits";
 import { Renderer } from "./fruits/renderer";
 import { Utilities } from "./fruits/utilities";
@@ -119,9 +120,25 @@ console.log("I hope they make sense though.");
 // TODO: Make a quick HTML page that uses the functions in fruits/utilities.ts to display some information about the fruits
 // Maybe something for school tomorrow
 
-let container = document.getElementById("fruit-cards");
+let container = document.getElementById("fruit-cards") as HTMLElement;
 
-if(container)
-{
-	Renderer.createFruitCards(fruits).forEach((fel) => container.appendChild(fel));
-}
+// Wont run if null
+Renderer.updateContainer(container, Renderer.createFruitCards(fruits))
+
+let key = document.getElementById("search-keys") as HTMLInputElement;
+let query = document.getElementById("search-query") as HTMLInputElement;
+
+document.getElementById("search-button")?.addEventListener('click', (e) => {
+	Renderer.updateContainer(container, Renderer.createFruitCards(Utilities.getFruits(key.value as keyof Fruit, query.value)));
+});
+
+
+			/*<select id="search-keys">
+				<option value="name">Name</option>
+				<option value="color">Color</option>
+				<option value="category">Category</option>
+			</select>
+			<input type="text" id="search-query">
+			<button type="button" id="search-button">Search</button>
+
+			<section id="fruit-cards"></section>*/
