@@ -7,7 +7,7 @@ export const Renderer = Object.freeze({
 	createFruitCard: (fruit: Fruit): HTMLElement => {
 
 		let el = document.createElement("article");
-		el.className += "card"; // We should probably use a global constant for this, but whatever for now.
+		el.className += "card noselect"; // We should probably use a global constant for this, but whatever for now.
 		el.appendChild(document.createElement("p")).innerHTML = fruit.icon;
 		el.appendChild(document.createElement("p")).innerHTML = fruit.name;
 		el.appendChild(document.createElement("p")).innerHTML = fruit.color;
