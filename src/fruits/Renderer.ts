@@ -15,4 +15,9 @@ export const Renderer = Object.freeze({
 
 		return el;
 	},
+
+	updateContainer: (container: HTMLElement, cards: HTMLElement[]) => {
+		container.innerHTML = "";
+		cards.forEach((cel) => container.appendChild(cel));
+	},
 });
