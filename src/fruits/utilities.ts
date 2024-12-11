@@ -3,9 +3,10 @@ import { fruits } from "./fruits";
 
 export const Utilities = Object.freeze({
 	// Gets only the first fruit that matches the key and value
-	getFruit: (key: keyof Fruit, value: string): Fruit | undefined => fruits.find((fruit) => fruit[key] === value) || undefined,
+	getFruit: (key: keyof Fruit, value: string): Fruit | undefined => fruits.find((fruit) => fruit[key].toLowerCase() === value.toLowerCase()) || undefined,
 	
-	getFruits: (key: keyof Fruit, value: string): Fruit[] => fruits.filter((fruit) => fruit[key] === value),
+	getFruits: (key: keyof Fruit, value: string, strict: boolean = true): Fruit[] => fruits.filter((fruit) => strict ? 
+	fruit[key].toLowerCase() === value.toLowerCase() : fruit[key].toLowerCase().includes(value.toLowerCase())),
 	
 	getKeyValue: (searchKey: keyof Fruit, searchValue: string, returnKey: keyof Fruit): string | undefined => Utilities.getFruit(searchKey, searchValue)?.[returnKey] || undefined,
 
