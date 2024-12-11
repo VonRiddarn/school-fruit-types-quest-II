@@ -12,15 +12,17 @@
 			<p>Look in the Console (windows: Ctrl + Shift + J)</p>
 
 			<!--Maybe make this dynamic later?-->
-			<select id="search-keys">
-				<option value="name">Name</option>
-				<option value="color">Color</option>
-				<option value="category">Category</option>
-			</select>
-			<input type="text" id="search-query">
-			<label for="search-strict">Strict</label>
-			<input type="checkbox" id="search-strict">
-			<button type="button" id="search-button">Search</button>
+			<form>
+				<select id="search-keys">
+					<option value="name">Name</option>
+					<option value="color">Color</option>
+					<option value="category">Category</option>
+				</select>
+				<input type="text" id="search-query">
+				<label for="search-strict" class="noselect">Strict</label>
+				<input type="checkbox" id="search-strict">
+				<button type="button" id="search-button">Search</button>
+			</form>
 
 			<section id="fruit-cards"></section>
 		</main>	

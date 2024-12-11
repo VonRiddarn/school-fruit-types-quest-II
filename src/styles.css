@@ -18,6 +18,14 @@ body {
 	}
 }
 
+form {
+	padding: 1rem 0;
+	* {
+		min-width: 2rem;
+		font-size: larger;
+	}
+}
+
 #fruit-cards {
 	display: grid;
 	grid-template-columns: repeat(5, 200px);
