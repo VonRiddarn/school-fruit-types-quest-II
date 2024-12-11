@@ -1,3 +1,5 @@
+import { fruits } from "./fruits/fruits";
+import { Renderer } from "./fruits/renderer";
 import { Utilities } from "./fruits/utilities";
 import "./styles.css";
 
@@ -116,3 +118,10 @@ console.log("I hope they make sense though.");
 
 // TODO: Make a quick HTML page that uses the functions in fruits/utilities.ts to display some information about the fruits
 // Maybe something for school tomorrow
+
+let container = document.getElementById("fruit-cards");
+
+if(container)
+{
+	Renderer.createFruitCards(fruits).forEach((fel) => container.appendChild(fel));
+}
