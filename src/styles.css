@@ -48,9 +48,16 @@ form {
 	background-color: aliceblue;
 
 	border-radius: 5px;
-	border-color: aqua;
+	border-color: rgba(0, 0, 0, 0);
 	border-width: 3px;
 	border-style: solid;
+}
+
+.card:hover {
+	position: relative;
+	top: -10px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.233);
+	border-color: aqua;
 }
 
 .noselect {
@@ -62,11 +69,6 @@ form {
             user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-.card:hover {
-	position: relative;
-	top: -10px;
-	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.233);
-}
 
 .card p:first-child {
 	font-size: 72px;
