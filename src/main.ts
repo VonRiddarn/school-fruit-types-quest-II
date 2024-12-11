@@ -1,6 +1,6 @@
 import Fruit from "./fruits/fruit";
 import { fruits } from "./fruits/fruits";
-import { Renderer } from "./fruits/renderer";
+import { Renderer } from "./fruits/Renderer";
 import { Utilities } from "./fruits/utilities";
 import "./styles.css";
 
@@ -130,7 +130,7 @@ let query = document.getElementById("search-query") as HTMLInputElement;
 let strict = document.getElementById("search-strict") as HTMLInputElement;
 
 document.getElementById("search-button")?.addEventListener('click', (e) => {
-	Renderer.updateContainer(container, Renderer.createFruitCards(Utilities.getFruits(key.value as keyof Fruit, query.value, strict.checked)));
+	Renderer.updateContainer(container, Renderer.createFruitCards(Utilities.getFruits(key.value as keyof Fruit, query.value.trim(), strict.checked)));
 });
 
 
