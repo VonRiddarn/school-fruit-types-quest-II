@@ -120,6 +120,8 @@ console.log("I hope they make sense though.");
 // TODO: Make a quick HTML page that uses the functions in fruits/utilities.ts to display some information about the fruits
 // Maybe something for school tomorrow
 
+// INITIALIZE HTML ELEMENTS
+
 let container = document.getElementById("fruit-cards") as HTMLElement;
 
 // Wont run if null
@@ -129,17 +131,17 @@ let key = document.getElementById("search-keys") as HTMLInputElement;
 let query = document.getElementById("search-query") as HTMLInputElement;
 let strict = document.getElementById("search-strict") as HTMLInputElement;
 
-document.getElementById("search-button")?.addEventListener('click', (e) => {
+document.getElementById("search-button")?.addEventListener('click', () => {
 	Renderer.updateContainer(container, Renderer.createFruitCards(Utilities.getFruits(key.value as keyof Fruit, query.value.trim(), strict.checked)));
 });
 
 
-			/*<select id="search-keys">
-				<option value="name">Name</option>
-				<option value="color">Color</option>
-				<option value="category">Category</option>
-			</select>
-			<input type="text" id="search-query">
-			<button type="button" id="search-button">Search</button>
+/*<select id="search-keys">
+	<option value="name">Name</option>
+	<option value="color">Color</option>
+	<option value="category">Category</option>
+</select>
+<input type="text" id="search-query">
+<button type="button" id="search-button">Search</button>
 
-			<section id="fruit-cards"></section>*/
+<section id="fruit-cards"></section>*/
